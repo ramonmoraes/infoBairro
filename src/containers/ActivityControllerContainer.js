@@ -5,7 +5,7 @@ class ActivityControllerContainer extends Component {
   constructor(props){
     super(props);
     this.state={
-      activity:"#main"
+      activity:"#inicio"
     }
   }
   componentDidMount(){
