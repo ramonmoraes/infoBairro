@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class ContentContainer extends Component {
+class ActivityContato extends Component {
   render() {
     return (
-    <h1>ContentContainer</h1>
+    <h1>ActivityContato</h1>
     );
   }
 }
 
-export default ContentContainer;
+export default ActivityContato;

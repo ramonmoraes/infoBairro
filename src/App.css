@@ -1,53 +1,100 @@
 body {
-  background: #333;
+  background: #fff;
+  font-size: 16px;
+  font-family: "Raleway";
+  --stella:#02A9D7;
+  --paralela:#13A20A;
+  /*overflow-x: hidden;*/
+}
+@media screen and (min-width:500px) {
+  body{
+    font-size: 18px;
+  }
 }
 .content {
   display: flex;
   flex-direction: column;
 }
+
 .menuWrapper {
   top: 0;
   position: absolute;
   display: flex;
   overflow: hidden;
+  max-width: 100vw;
 }
+
 .menu {
   position: relative;
   min-width: 100vw;
   transition: 0.1s ease-in-out;
   height: 100vh;
-  background-color: rgba(255,255,255,0.15);
+  background-color: rgba(44,44,44,0.45);
   display: flex;
   justify-content: center;
   align-content: center;
 }
 .menu .btnWrapper {
+
   position: relative;
   transition: 0.5s ease;
-  /*height: 100%;*/
-  /*border: 1px solid red;*/
   max-height: 500px;
   margin: auto;
 }
 .menu .btnWrapper button {
+
   max-width: 200px;
   margin: 7px 15px;
   width: 170px;
   border-radius: 5px;
-  border: 1px solid #dcdcdc;
+  border: 1px solid white;
+  background-color: rgba(255,255,255,0.4);
+  column-rule-color: #111;
+
+  font-size: 15px;
   padding: 7px;
-  background-color: rgba(51,51,51,0.7);
   font-variant: small-caps;
-  color:#ddd;
   cursor: pointer;
 }
 .hamburger{
   position: relative;
+  z-index: 1;
   transition: 0.35s ease;
   left: 0;
   max-height: 50px;
   padding: 10px;
+  cursor: pointer;
 }
 .rotate{
   transform: rotate(90deg);
+}
+.activity{
+  padding: 75px 10px;
+}
+.activity h2,
+.activity h1{
+  text-align: center;
+  color:#111;
+}
+.activity p{
+  text-align: justify;
+  color:#111;
+}
+.stella{
+  /*color: var(--stella);*/
+  padding: 5px;
+  color: white;
+  background-color:var(--stella);
+}
+.paralela{
+  /*color: var(--paralela);*/
+  padding: 5px;
+  color: white;
+  background-color:var(--paralela);
+}
+.header{
+  font-size: 14px;
+}
+.header p{
+  text-align: center;
 }

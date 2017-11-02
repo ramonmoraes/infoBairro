@@ -5,7 +5,7 @@ class MenuContainer extends Component {
   constructor(props){
     super(props);
     this.state={
-      hidden:false
+      hidden:true
     }
   }
   handleHidden = () => {

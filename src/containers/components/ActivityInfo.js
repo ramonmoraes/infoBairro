@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 
-class ContentContainer extends Component {
+class ActivityInfo extends Component {
   render() {
     return (
-    <h1>ContentContainer</h1>
+      <div className='activity'>
+        <h1>Activity Info</h1>
+        <p> Unreachable code  no-unreachable </p>
+      </div>
+
     );
   }
 }
 
-export default ContentContainer;
+export default ActivityInfo;

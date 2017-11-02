@@ -13,31 +13,40 @@ class Menu extends Component {
     this.setState({
         left : (this.state.left==='0vw') ? "-100vw" : "0vw"
       });
-      let element = ev.target;
+
+    let element = ev.target;
     if(element.name==='menu'){
       element.classList.add("rotate");
       setTimeout(() => {
         element.classList.remove("rotate");
       },350)
     }
+
   }
+
   changeActivity =(ev)=> {
     this.animation(ev);
     window.location.hash=ev.target.value
   }
 
   render() {
+    let z = {
+      "zIndex":(this.props.hidden) ? -1 : 10
+    }
+
     return (
-      <div className='menuWrapper'>
-      <nav className='menu' style={this.state}>
-      <div className='btnWrapper content' style={this.state}>
-        <button  value='inicio' onClick={this.changeActivity}> Inicio </button>
-        <button  value='stats' onClick={this.changeActivity}> Estastísticas </button>
-        <button  value='info' onClick={this.changeActivity}> Informações </button>
-        <button  value='contato' onClick={this.changeActivity}> Contato </button>
-      </div>
-      </nav>
-        <img name='menu' className='hamburger'src='/assets/menu.png' alt='oi' onClick={this.animation} style={this.state}/>;
+      <div className='menuWrapper' style={z}>
+
+        <nav className='menu' style={this.state}>
+        <div className='btnWrapper content' style={this.state}>
+          <button  value='inicio' onClick={this.changeActivity}> Inicio </button>
+          <button  value='stats' onClick={this.changeActivity}> Estastísticas </button>
+          <button  value='info' onClick={this.changeActivity}> Informações </button>
+          <button  value='contato' onClick={this.changeActivity}> Contato </button>
+        </div>
+        </nav>
+      
+        <img name='menu' className='hamburger'src='/assets/menu2.png' alt='oi' onClick={this.animation} style={this.state}/>;
       </div>
     );
   }

@@ -1,30 +1,40 @@
 import React, { Component } from 'react';
+import ActivityInicio from './components/ActivityInicio';
+import ActivityStats from './components/ActivityStats';
+import ActivityInfo from './components/ActivityInfo';
+import ActivityContato from './components/ActivityContato';
 
 class ContentContainer extends Component {
-  render() {
-    let content;
+  getContent = () => {
+    let res;
     switch (this.props.activity) {
       case "#inicio":
-        
+       res =  <ActivityInicio/>;
       break;
 
-      case "stats":
-
+      case "#stats":
+       res =  <ActivityStats/>;
       break;
 
-      case "info":
-
+      case "#info":
+       res =  <ActivityInfo/>;
       break;
 
-      case "contato":
-
+      case "#contato":
+       res =  <ActivityContato/>;
       break;
 
       default:
-      console.log('default');
+       res =  <ActivityInicio/>;
     }
+    return res;
+  }
+  render() {
+    let content = this.getContent();
     return (
-    {content}
+      <div>
+      {content}
+      </div>
     );
   }
 }
