@@ -19,7 +19,6 @@ class Menu extends Component {
   componentWillMount(){
     // this.setState({left:"0vw"});
     setTimeout(() => {
-      console.log('oi');
       this.setState({left:"0vw"});
     },1);
   }

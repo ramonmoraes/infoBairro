@@ -7,18 +7,17 @@ class ActivityInicio extends Component {
       left:"-100vw"
     }
   }
-  
+
   componentWillMount(){
     // this.setState({left:"0vw"});
     setTimeout(() => {
-      console.log('oi');
       this.setState({left:"0vw"});
     },1);
   }
 
   render() {
     return (
-      <nav className='hamburger'>
+      <nav className='hamburger' style={this.state}>
           <img onClick={this.props.handleHidden} src='/assets/menu2.png' alt='menu2'/>
       </nav>
     );
