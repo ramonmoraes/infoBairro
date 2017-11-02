@@ -9,7 +9,6 @@ class ActivityInicio extends Component {
         <h2> Info midia kit </h2>
         <p> Seu publico alvo localizado. </p>
         </div>
-
       </div>
     );
   }
