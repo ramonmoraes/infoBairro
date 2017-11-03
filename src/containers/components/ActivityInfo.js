@@ -4,8 +4,13 @@ class ActivityInfo extends Component {
   render() {
     return (
       <div className='activity'>
-        <h1>Activity Info</h1>
-        <p> Unreachable code  no-unreachable </p>
+        <h1>Informações</h1>
+        <section>
+          <div>
+            <p> Informações que achar cabiveis </p>
+
+          </div>
+        </section>
       </div>
 
     );

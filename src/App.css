@@ -1,5 +1,8 @@
 body {
   background: #fff;
+  background-image: url('/assets/bg1.png');
+  /*background-repeat: no-repeat;*/
+  /*background-position: top right;*/
   font-size: 16px;
   font-family: "Raleway";
   --stella:#02A9D7;
@@ -32,6 +35,8 @@ body {
 .activity p{
   text-align: justify;
   color:#111;
+  max-width: 95%;
+  margin: auto;
 }
 .stella{
   padding: 5px;
@@ -81,6 +86,9 @@ section{
     margin: 5px auto;
     transform: scale(0.8);
   }
+  .hero p{
+    font-size: 18px;
+  }
 }
 .inicio section:nth-child(even) h1{
   color:var(--stella);
@@ -97,6 +105,7 @@ section .duo {
   flex-direction: column;
   justify-content: space-around;
 }
+
 .duo p{
   text-align: justify;
   max-width: 95%;
