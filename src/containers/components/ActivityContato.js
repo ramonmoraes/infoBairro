@@ -13,12 +13,12 @@ class ActivityContato extends Component {
           <ul>
             <li><span className='stella'>Stella</span> :
               <a target ="blank" href='https://www.instagram.com/infostellaba/'>
-                 www.instagram.com/infostellaba
+                 @infostellaba
               </a>
             </li>
             <li><span className='paralela'>Paralela</span> :
               <a target ="blank" href='https://www.instagram.com/infoparalela/'>
-                 www.instagram.com/infoparalela
+                 @infoparalela
               </a>
             </li>
           </ul>
