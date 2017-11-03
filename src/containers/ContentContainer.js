@@ -7,7 +7,7 @@ import ActivityContato from './components/ActivityContato';
 class ContentContainer extends Component {
   getContent = () => {
     let res;
-    switch (this.props.activity) {
+    switch ("#stats"||this.props.activity) {
       case "#inicio":
        res =  <ActivityInicio/>;
       break;

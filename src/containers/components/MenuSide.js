@@ -13,15 +13,15 @@ class Menu extends Component {
     this.props.handleHidden();
   }
 
-  componentWillUnMount(){
-  }
-
   componentWillMount(){
-    // this.setState({left:"0vw"});
     setTimeout(() => {
       this.setState({left:"0vw"});
     },1);
   }
+
+  componentWillUnMount(){
+  }
+
 
   render() {
     return (
@@ -32,6 +32,7 @@ class Menu extends Component {
             <button  value='stats' onClick={this.changeActivity}> Estastísticas </button>
             <button  value='info' onClick={this.changeActivity}> Informações </button>
             <button  value='contato' onClick={this.changeActivity}> Contato </button>
+            <button onClick={this.props.handleHidden}> Fechar Menu </button>
           </div>
         </nav>
       </div>

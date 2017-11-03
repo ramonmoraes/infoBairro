@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import MenuContainer from '../MenuContainer'
 import ContentContainer from '../ContentContainer'
 
-class ActivityController extends Component {
+class ActivitiesController extends Component {
   render() {
 
     return (
@@ -14,4 +14,4 @@ class ActivityController extends Component {
   }
 }
 
-export default ActivityController;
+export default ActivitiesController;

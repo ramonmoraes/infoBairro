@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ActivityController from './components/ActivityController';
+import ActivitiesController from './components/ActivitiesController';
 
 class ActivityControllerContainer extends Component {
   constructor(props){
@@ -19,7 +19,7 @@ class ActivityControllerContainer extends Component {
 
   render() {
     return (
-      <ActivityController activity={this.state.activity}/>
+      <ActivitiesController activity={this.state.activity}/>
     );
   }
 }

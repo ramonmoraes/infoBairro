@@ -11,71 +11,17 @@ body {
     font-size: 18px;
   }
 }
+
 .content {
   display: flex;
   flex-direction: column;
-}
-
-.absolute{
-  /*display: flex;
-  overflow: hidden;
-  flex-wrap: nowrap;*/
-}
-
-.menuWrapper {
-  position: absolute;
-  top: 0;
-  display: flex;
-  overflow: hidden;
-  max-width: 100vw;
-}
-
-.menu {
-  position: relative;
-  min-width: 100vw;
-  transition: 0.1s ease-in-out;
-  height: 100vh;
-  background-color: rgba(44,44,44,0.45);
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.menu .btnWrapper {
-  position: relative;
-  transition: 0.4s;
-  max-height: 500px;
-  margin: auto;
-}
-.menu .btnWrapper button {
-
-  max-width: 200px;
-  margin: 7px 15px;
-  width: 170px;
-  border-radius: 5px;
-  border: 1px solid white;
-  background-color: rgba(255,255,255,0.4);
-  column-rule-color: #111;
-
-  font-size: 15px;
-  padding: 7px;
-  font-variant: small-caps;
-  cursor: pointer;
-}
-.hamburger{
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  padding: 10px;
-  cursor: pointer;
-  transition: 0.4s;
 }
 
 .rotate{
   transform: rotate(90deg);
 }
 .activity{
-  padding: 75px;
+  padding: 75px 0;
 }
 .activity h2,
 .activity h1{
@@ -87,13 +33,11 @@ body {
   color:#111;
 }
 .stella{
-  /*color: var(--stella);*/
   padding: 5px;
   color: white;
   background-color:var(--stella);
 }
 .paralela{
-  /*color: var(--paralela);*/
   padding: 5px;
   color: white;
   background-color:var(--paralela);
@@ -103,4 +47,49 @@ body {
 }
 .header p{
   text-align: center;
+}
+
+section{
+  padding: 75px 0;
+  height: 100px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inicio section:nth-child(even) h1{
+  color:var(--stella);
+}
+
+.inicio section:nth-child(odd) h1{
+  color:var(--paralela);
+}
+
+section .duo {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.duo p{
+  text-align: justify;
+  max-width: 95%;
+  margin: 5px auto;
+}
+.duo img{
+  width: 150px;
+  margin: auto;
+}
+
+@media screen and (min-width:500px) {
+  section .duo{
+    width: 80%;
+    max-width: 800px;
+    flex-direction: row;
+  }
+  section:nth-child(odd) .duo{
+    flex-direction: row-reverse;
+  }
 }
