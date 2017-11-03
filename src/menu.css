@@ -23,6 +23,7 @@
   max-height: 500px;
   margin: auto;
 }
+
 @media screen and (min-width:600px) {
   .menuWrapper{
     max-width: 200px;
@@ -35,6 +36,7 @@
     transition: 0.25s;
   }
 }
+
 .menu .btnWrapper button {
 
   max-width: 200px;

@@ -6,17 +6,17 @@ class ActivityContato extends Component {
       <div className='activity'>
       <h1>Contatos</h1>
       <section>
-        <div>
+        <div className='contato'>
           <p> Telefone : 71 98806-5757 </p><br/>
           <p>E-mail : portalinfostella@gmail.com </p><br/>
           <p> Midia Sociais</p>
           <ul>
-            <li>Stella :
+            <li><span className='stella'>Stella</span> :
               <a target ="blank" href='https://www.instagram.com/infostellaba/'>
                  www.instagram.com/infostellaba
               </a>
             </li>
-            <li>Paralela :
+            <li><span className='paralela'>Paralela</span> :
               <a target ="blank" href='https://www.instagram.com/infoparalela/'>
                  www.instagram.com/infoparalela
               </a>

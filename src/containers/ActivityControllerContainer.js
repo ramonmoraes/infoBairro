@@ -8,9 +8,11 @@ class ActivityControllerContainer extends Component {
       activity:"#inicio"
     }
   }
+  
   componentDidMount(){
     this.hashChanger();
   }
+
   hashChanger = () => {
     window.addEventListener('hashchange', (ev) => {
       this.setState({activity:window.location.hash});
