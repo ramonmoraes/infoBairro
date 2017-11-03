@@ -19,20 +19,16 @@ class Menu extends Component {
     },1);
   }
 
-  componentWillUnMount(){
-  }
-
-
   render() {
     return (
       <div className='menuWrapper'>
-        <nav className='menu'>
+        <nav className='menu' ref='menu'>
           <div className='btnWrapper content' style={this.state}>
             <button  value='inicio' onClick={this.changeActivity}> Inicio </button>
             <button  value='stats' onClick={this.changeActivity}> Estastísticas </button>
             <button  value='info' onClick={this.changeActivity}> Informações </button>
             <button  value='contato' onClick={this.changeActivity}> Contato </button>
-            <button onClick={this.props.handleHidden}> Fechar Menu </button>
+            <button  value='fechar' onClick={this.props.handleHidden}> Fechar Menu </button>
           </div>
         </nav>
       </div>

@@ -4,6 +4,7 @@ body {
   font-family: "Raleway";
   --stella:#02A9D7;
   --paralela:#13A20A;
+  --post:#FCCE04;
   /*overflow-x: auto;*/
 }
 @media screen and (min-width:500px) {
@@ -42,6 +43,12 @@ body {
   color: white;
   background-color:var(--paralela);
 }
+
+.post{
+  padding: 5px;
+  color: white;
+  background-color:var(--post);
+}
 .header{
   font-size: 14px;
 }
@@ -57,7 +64,24 @@ section{
   justify-content: center;
   align-items: center;
 }
-
+.hero{
+  width: 150px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width:350px) {
+  .stats section{
+    justify-content: center;
+  }
+  .hero{
+    width: 120px;
+    margin: 5px auto;
+    transform: scale(0.8);
+  }
+}
 .inicio section:nth-child(even) h1{
   color:var(--stella);
 }
@@ -92,4 +116,8 @@ section .duo {
   section:nth-child(odd) .duo{
     flex-direction: row-reverse;
   }
+}
+
+canvas,.hero{
+  z-index: 0;
 }

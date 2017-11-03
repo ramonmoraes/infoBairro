@@ -9,17 +9,24 @@ class CircleCount extends Component {
       radius:this.props.radius ||50,
       color:this.props.color || "#13a8a4",
       max:this.props.max || 100,
+      countUp:this.props.countUp || 1000
     }
   }
+
   componentDidMount(){
     this.draw()
   }
-  draw = (x) => {
-    let amountToIncrease = 10;
+
+  draw = (x,y) => {
     let c = this.refs.circle;
     let context = c.getContext("2d");
-    let amount = x || 10;
+    let amount = x || 5;
     if(amount>this.state.max) amount=this.state.max ;
+    let count = y || 5;
+    if(count>this.state.countUp) count=this.state.countUp;
+
+    let countInc = Math.round(this.state.countUp / 20);
+
     let centerX = this.state.width / 2;
     let centerY = this.state.height / 2;
     let radius = this.state.radius;
@@ -41,6 +48,11 @@ class CircleCount extends Component {
     context.strokeStyle = 'white';
     context.stroke();
 
+    context.fillStyle = "black";
+    context.font = "20px Arial";
+    context.textAlign = "center";
+    context.fillText(count,centerX,centerY+5);
+
     context.beginPath();
     context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
     context.lineWidth = 5;
@@ -49,11 +61,15 @@ class CircleCount extends Component {
 
     let inc = setInterval(() => {
       amount = amount+3;
-      console.log(amount);
+      count=count+countInc;
+
       if(amount<=full){
-        this.draw(amount)
+        this.draw(amount,count)
         clearInterval(inc)
       }else{
+        if(count<this.state.countUp){
+          this.draw(amount,count)
+        }
         clearInterval(inc)
       }
     },33);
