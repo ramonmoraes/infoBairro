@@ -6,7 +6,7 @@ class ActivitiesController extends Component {
   render() {
 
     return (
-      <div className='absolute'>
+      <div>
       <MenuContainer/>
       <ContentContainer activity={this.props.activity}/>
       </div>

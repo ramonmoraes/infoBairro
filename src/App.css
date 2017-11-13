@@ -1,15 +1,20 @@
 body {
   background: #fff;
   background-image: url('/assets/bg1.png');
-  /*background-repeat: no-repeat;*/
-  /*background-position: top right;*/
   font-size: 16px;
   font-family: "Raleway";
   --stella:#02A9D7;
   --paralela:#13A20A;
   --post:#FCCE04;
-  /*overflow-x: auto;*/
+  --espacamentoVertical:60px;
+
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
+
 @media screen and (min-width:500px) {
   body{
     font-size: 18px;
@@ -25,7 +30,9 @@ body {
   transform: rotate(90deg);
 }
 .activity{
-  padding: 75px 0;
+  /*padding: 75px 0;*/
+  max-height: 90vh;
+  overflow-y: auto;
 }
 .activity h2,
 .activity h1{

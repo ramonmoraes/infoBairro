@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import MenuTop from './components/MenuTop.js'; // <-sem .js nao pega '-'
 import MenuSide from './components/MenuSide.js'; // <-sem .js nao pega '-'
 
 class MenuContainer extends Component {
@@ -15,10 +14,9 @@ class MenuContainer extends Component {
     })
   }
   render() {
-    return (this.state.hidden) ?
-    <MenuTop handleHidden={this.handleHidden}/>
-    :
-    <MenuSide handleHidden={this.handleHidden}/>
+    return (
+      <MenuSide handleHidden={this.handleHidden}/>
+  )
   }
 }
 
